@@ -1,0 +1,41 @@
+/* frontend-pkg/src/pages/admin/UserForm.css */
+.user-form-container .card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+.btn-submit { background-color: #28a745; }
+.btn-cancel { background-color: #6c757d; }
+.form-actions button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+/* frontend-pkg/src/pages/guru/ProfileViewPage.css */
+.profile-view-container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.profile-view-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 25px; }
+.profile-view-header h2 { margin: 0; }
+.edit-button { background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+.profile-view-body { display: flex; gap: 30px; }
+.profile-view-photo { flex-shrink: 0; }
+.profile-view-photo img { width: 177px; height: 236px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
+.profile-view-details { flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.detail-item { font-size: 1rem; }
+.detail-item label { display: block; font-size: 0.85rem; color: #6c757d; margin-bottom: 4px; font-weight: bold; }
+.detail-item p { margin: 0; }
+.detail-item.full-width { grid-column: 1 / -1; }

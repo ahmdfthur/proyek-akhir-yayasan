@@ -1,0 +1,29 @@
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.page-header h2 { margin: 0; }
+
+.filter-export-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 250px;
+}
+
+.export-button {
+    background-color: #198754; /* Warna hijau */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.report-table { width: 100%; border-collapse: collapse; }
+.report-table th, .report-table td { padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: left; }
+.score-badge { font-weight: bold; color: #007bff; font-size: 1.1rem; }

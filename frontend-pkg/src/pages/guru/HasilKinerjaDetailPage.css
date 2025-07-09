@@ -1,0 +1,10 @@
+.detail-container { max-width: 900px; margin: 0 auto; }
+.back-button { background: none; border: none; color: #007bff; font-size: 1rem; cursor: pointer; margin-bottom: 20px; padding: 0; }
+.detail-summary-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; display: flex; justify-content: space-around; }
+.final-score-badge { font-size: 1.2rem; font-weight: bold; color: #28a745; }
+.detail-container .card { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
+.competency-title { margin-top: 0; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+.detail-list { list-style: none; padding: 0; }
+.detail-list-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e9ecef; }
+.detail-list-item:last-child { border-bottom: none; }
+.score-badge { background-color: #e9ecef; color: #495057; font-weight: bold; padding: 5px 10px; border-radius: 5px; }

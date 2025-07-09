@@ -1,0 +1,8 @@
+.evaluation-container .card { background-color: #fff; padding: 30px; border-radius: 8px; }
+.evaluation-header { display: flex; gap: 20px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.evaluation-table { width: 100%; border-collapse: collapse; }
+.evaluation-table th, .evaluation-table td { padding: 15px; border-bottom: 1px solid #ddd; text-align: left; vertical-align: top; }
+.evaluation-table td p { font-size: 0.9rem; color: #666; margin: 5px 0 0 0; }
+.score-input { width: 60px; padding: 8px; text-align: center; }
+.evaluation-table textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+.form-actions { text-align: right; margin-top: 20px; }

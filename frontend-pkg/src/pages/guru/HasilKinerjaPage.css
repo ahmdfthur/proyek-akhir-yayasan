@@ -1,0 +1,107 @@
+/* frontend-pkg/src/pages/guru/HasilKinerjaPage.css */
+
+.hasil-kinerja-container h2 {
+    margin-top: 0;
+}
+.hasil-kinerja-container > p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.result-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.result-card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.result-card-header h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.result-card-header p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.result-card-body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.final-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9f7ef;
+    border: 2px solid #28a745;
+    color: #28a745;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.final-score .score-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.final-score .score-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.detail-score p {
+    margin: 5px 0;
+}
+
+.result-card-footer {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    text-align: right;
+    border-radius: 0 0 8px 8px;
+}
+
+.detail-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card-no-data {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    color: #6c757d;
+}

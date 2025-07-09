@@ -1,0 +1,14 @@
+/* frontend-pkg/src/pages/headmaster/ValidasiRppPage.css */
+.validation-container .card { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); overflow-x: auto; }
+.validation-table { width: 100%; border-collapse: collapse; min-width: 800px; }
+.validation-table th, .validation-table td { padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: left; }
+.validation-table th { background-color: #f4f7f6; }
+.validation-table .rpp-type { text-transform: capitalize; }
+.status { padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; color: white; text-transform: capitalize; }
+.status-pending { background-color: #ffc107; }
+.status-approved { background-color: #28a745; }
+.status-rejected { background-color: #dc3545; }
+.action-group { display: flex; gap: 10px; }
+.action-button { border: none; padding: 6px 12px; border-radius: 5px; color: white; cursor: pointer; font-weight: bold; }
+.action-button.approve { background-color: #28a745; }
+.action-button.reject { background-color: #dc3545; }

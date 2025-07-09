@@ -1,0 +1,13 @@
+/* frontend-pkg/src/pages/admin/UserManagementPage.css */
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.page-header h2 { margin: 0; }
+.add-user-button { background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.user-table { width: 100%; border-collapse: collapse; }
+.user-table th, .user-table td { padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: left; }
+.role-badge { padding: 4px 8px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; color: white; text-transform: capitalize; }
+.role-admin_yayasan { background-color: #dc3545; }
+.role-kepala_sekolah { background-color: #fd7e14; }
+.role-guru { background-color: #20c997; }
+.action-btn { border: none; padding: 5px 10px; border-radius: 5px; color: white; cursor: pointer; margin-right: 5px; }
+.action-btn.edit { background-color: #ffc107; }
+.action-btn.delete { background-color: #6c757d; }

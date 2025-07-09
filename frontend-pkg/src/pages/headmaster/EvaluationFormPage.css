@@ -1,0 +1,27 @@
+/* Tambahkan atau ganti styling ini */
+.competency-group { margin-bottom: 30px; }
+.competency-title { 
+    background-color: #f4f7f6; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+.evaluation-table .score-cell { width: 220px; }
+.evaluation-table .score-cell select { width: 100%; padding: 8px; }
+
+.results-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f7ef;
+    border: 1px solid #d1e7dd;
+    border-radius: 8px;
+}
+.results-summary h4 { margin-top: 0; }
+.results-summary .grade-badge {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+}
