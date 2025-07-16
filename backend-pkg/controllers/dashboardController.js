@@ -36,3 +36,45 @@ exports.getTeacherSummary = async (req, res) => {
         res.status(500).json({ message: "Server Error" });
     }
 };
+
+exports.getHeadmasterSummary = async (req, res) => {
+    try {
+        const principalId = req.user.id;
+        
+        // Ambil school_id dari user Kepala Sekolah yang sedang login
+        const [principal] = await db.query('SELECT school_id FROM users WHERE id = ?', [principalId]);
+        if (!principal || principal.length === 0 || !principal[0].school_id) {
+            return res.status(403).json({ message: 'Anda tidak terhubung dengan sekolah manapun.' });
+        }
+        const schoolId = principal[0].school_id;
+
+        // Jalankan beberapa query statistik secara paralel
+        const [
+            [teacherStats],
+            [pendingRppStats],
+            [evaluationStats]
+        ] = await Promise.all([
+            // 1. Hitung jumlah guru di sekolahnya
+            db.query("SELECT COUNT(*) as total FROM users WHERE role = 'guru' AND school_id = ?", [schoolId]),
+            // 2. Hitung RPP yang statusnya 'pending' dari guru di sekolahnya
+            db.query(`
+                SELECT COUNT(*) as total FROM rpp_submissions 
+                WHERE status = 'pending' AND teacher_id IN (SELECT id FROM users WHERE school_id = ?)
+            `, [schoolId]),
+            // 3. Hitung jumlah penilaian yang sudah diselesaikan oleh Kepsek ini
+            db.query("SELECT COUNT(*) as total FROM evaluation_results WHERE evaluator_id = ?", [principalId])
+        ]);
+
+        const summary = {
+            total_teachers: teacherStats.total || 0,
+            pending_rpp: pendingRppStats.total || 0,
+            completed_evaluations: evaluationStats.total || 0,
+        };
+
+        res.status(200).json(summary);
+
+    } catch (error) {
+        console.error("Get Headmaster Summary Error:", error);
+        res.status(500).json({ message: "Server Error" });
+    }
+};

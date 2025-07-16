@@ -1,41 +1,43 @@
-// frontend-pkg/src/components/layout/Sidebar.js
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
-
-// Import ikon dengan nama yang sudah diperbarui
+// Import ikon dengan nama yang sudah benar
 import { 
-    FaGaugeHigh,            // <-- Pengganti FaTachometerAlt
+    FaGaugeHigh,
     FaUser, 
-    FaArrowUpFromBracket,   // <-- Pengganti FaFileUpload
-    FaClipboardList 
+    FaArrowUpFromBracket,
+    FaClipboardList,
+    FaUsers,
+    FaFileSignature
 } from 'react-icons/fa6';
 
-// Definisikan menu untuk setiap peran dengan ikon yang benar
+// Definisikan menu untuk setiap peran
 const menuConfig = {
     guru: [
-        { path: '/dashboard/beranda', icon: <FaGaugeHigh />, text: 'Beranda' },
+        // UBAH PATH DI SINI
+        { path: '/dashboard', icon: <FaGaugeHigh />, text: 'Beranda' },
         { path: '/dashboard/biodata', icon: <FaUser />, text: 'Biodata Diri' },
         { path: '/dashboard/upload-rpp', icon: <FaArrowUpFromBracket />, text: 'Upload RPP' },
         { path: '/dashboard/hasil-kinerja', icon: <FaClipboardList />, text: 'Hasil Kinerja' },
     ],
     kepala_sekolah: [
-        { path: '/dashboard/beranda', icon: <FaGaugeHigh />, text: 'Beranda' },
+        // UBAH PATH DI SINI
+        { path: '/dashboard', icon: <FaGaugeHigh />, text: 'Beranda' },
         { path: '/dashboard/validasi-rpp', icon: <FaClipboardList />, text: 'Validasi RPP' },
-        { path: '/dashboard/penilaian-guru', icon: <FaUser />, text: 'Penilaian Guru' },
+        { path: '/dashboard/penilaian-guru', icon: <FaFileSignature />, text: 'Penilaian Guru' },
     ],
     admin_yayasan: [
-        { path: '/dashboard/beranda', icon: <FaGaugeHigh />, text: 'Beranda' },
-        { path: '/dashboard/manajemen-pengguna', icon: <FaUser />, text: 'Manajemen Pengguna' },
+        // UBAH PATH DI SINI
+        { path: '/dashboard', icon: <FaGaugeHigh />, text: 'Beranda' },
+        { path: '/dashboard/manajemen-pengguna', icon: <FaUsers />, text: 'Manajemen Pengguna' },
         { path: '/dashboard/laporan-kinerja', icon: <FaClipboardList />, text: 'Laporan Kinerja' },
     ]
-    // Tambahkan peran 'yayasan' jika diperlukan
 };
 
 
 const Sidebar = ({ userRole }) => {
-    const menuItems = menuConfig[userRole] || []; // Ambil menu sesuai peran
+    // Ambil menu sesuai peran, jika tidak ada, gunakan array kosong
+    const menuItems = menuConfig[userRole] || []; 
 
     return (
         <aside className="sidebar">
@@ -47,6 +49,8 @@ const Sidebar = ({ userRole }) => {
                     <NavLink
                         key={index}
                         to={item.path}
+                        // Tambahkan 'end' untuk NavLink ke path root dasbor
+                        end={item.path === '/dashboard'}
                         className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}
                     >
                         {item.icon}

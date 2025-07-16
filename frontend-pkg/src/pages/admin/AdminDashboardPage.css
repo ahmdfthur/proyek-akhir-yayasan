@@ -1,0 +1,98 @@
+.admin-dashboard .subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card-stat {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-stat .icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+}
+.card-stat .info {
+    display: flex;
+    flex-direction: column;
+}
+.card-stat .info .value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.card-stat .info .label {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.icon.total-users { color: #0d6efd; }
+.icon.total-schools { color: #6f42c1; }
+.icon.total-evals { color: #198754; }
+
+.role-details h3 {
+    margin-bottom: 15px;
+}
+
+.role-card .icon {
+    font-size: 2rem;
+}
+
+.icon.admin { color: #dc3545; }
+.icon.headmaster { color: #fd7e14; }
+.icon.teacher { color: #20c997; }
+
+.quick-actions h2 {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.action-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.action-button .action-info h3 {
+    margin: 0 0 5px 0;
+}
+.action-button .action-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.action-button .action-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+}

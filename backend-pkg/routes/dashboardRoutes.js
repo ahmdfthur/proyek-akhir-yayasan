@@ -8,5 +8,6 @@ const { protect } = require('../middleware/authMiddleware');
 router.use(protect);
 
 router.get('/teacher-summary', dashboardController.getTeacherSummary);
+router.get('/headmaster-summary', dashboardController.getHeadmasterSummary);
 
 module.exports = router;
